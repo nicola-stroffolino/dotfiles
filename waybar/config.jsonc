@@ -10,7 +10,7 @@
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
-    "width": 1900,
+    "width": 1338,
     "margin-top": 10,
 
 
@@ -61,7 +61,7 @@
 },
 
 "custom/cpuinfo": {
-    "exec": " /home/kyokino/.config/hyprdots/scripts/cpuinfo.sh",
+    "exec": " /home/Nicola/.config/hyprdots/scripts/cpuinfo.sh",
     "return-type": "json",
     "format": "{}",
     "rotate": 0,
@@ -71,18 +71,18 @@
 },
 
 "custom/gpuinfo": {
-    "exec": " /home/kyokino/.config/hyprdots/scripts/gpuinfo.sh",
+    "exec": " /home/Nicola/.config/hyprdots/scripts/gpuinfo.sh",
     "return-type": "json",
     "format": "{}",
     "rotate": 0,
     "interval": 5, // once every 5 seconds
     "tooltip": true,
     "max-length": 1000,
-    "on-click": "/home/kyokino/.config/hyprdots/scripts/gpuinfo.sh --toggle",
+    "on-click": "/home/Nicola/.config/hyprdots/scripts/gpuinfo.sh --toggle",
 },
 
 "custom/gpuinfo#nvidia": {
-    "exec": " /home/kyokino/.config/hyprdots/scripts/gpuinfo.sh --use nvidia ",
+    "exec": " /home/Nicola/.config/hyprdots/scripts/gpuinfo.sh --use nvidia ",
     "return-type": "json",
     "format": "{}",
     "rotate": 0,
@@ -92,7 +92,7 @@
 },
 
 "custom/gpuinfo#amd": {
-    "exec": " /home/kyokino/.config/hyprdots/scripts/gpuinfo.sh --use amd ",
+    "exec": " /home/Nicola/.config/hyprdots/scripts/gpuinfo.sh --use amd ",
     "return-type": "json",
     "format": "{}",
     "rotate": 0,
@@ -102,7 +102,7 @@
 },
 
 "custom/gpuinfo#intel": {
-    "exec": " /home/kyokino/.config/hyprdots/scripts/gpuinfo.sh --use intel ",
+    "exec": " /home/Nicola/.config/hyprdots/scripts/gpuinfo.sh --use intel ",
     "return-type": "json",
     "format": "{}",
     "rotate": 0,
@@ -129,11 +129,11 @@
 },
 
 "custom/updates": {
-    "exec": "/home/kyokino/.config/hyprdots/scripts/systemupdate.sh",
+    "exec": "/home/Nicola/.config/hyprdots/scripts/systemupdate.sh",
     "return-type": "json",
     "format": "󰆦 {}",
     "rotate": 0,
-    "on-click": "/home/kyokino/.config/hyprdots/scripts/systemupdate.sh up",
+    "on-click": "/home/Nicola/.config/hyprdots/scripts/systemupdate.sh up",
     "interval": 86400, // once every day
     "tooltip": true,
 },
@@ -177,9 +177,9 @@
     "rotate": 0,
     "format-muted": "婢",
     "on-click": "pavucontrol -t 3",
-    "on-click-middle": "/home/kyokino/.config/hyprdots/scripts/volumecontrol.sh -o m",
-    "on-scroll-up": "/home/kyokino/.config/hyprdots/scripts/volumecontrol.sh -o i",
-    "on-scroll-down": "/home/kyokino/.config/hyprdots/scripts/volumecontrol.sh -o d",
+    "on-click-middle": "/home/Nicola/.config/hyprdots/scripts/volumecontrol.sh -o m",
+    "on-scroll-up": "/home/Nicola/.config/hyprdots/scripts/volumecontrol.sh -o i",
+    "on-scroll-down": "/home/Nicola/.config/hyprdots/scripts/volumecontrol.sh -o d",
     "tooltip-format": "{icon} {desc} // {volume}%",
     "scroll-step": 5,
     "format-icons": {
@@ -199,9 +199,9 @@
     "format-source": "",
     "format-source-muted": "",
     "on-click": "pavucontrol -t 4",
-    "on-click-middle": "/home/kyokino/.config/hyprdots/scripts/volumecontrol.sh -i m",
-    "on-scroll-up": "/home/kyokino/.config/hyprdots/scripts/volumecontrol.sh -i i",
-    "on-scroll-down": "/home/kyokino/.config/hyprdots/scripts/volumecontrol.sh -i d",
+    "on-click-middle": "/home/Nicola/.config/hyprdots/scripts/volumecontrol.sh -i m",
+    "on-scroll-up": "/home/Nicola/.config/hyprdots/scripts/volumecontrol.sh -i i",
+    "on-scroll-down": "/home/Nicola/.config/hyprdots/scripts/volumecontrol.sh -i d",
     "tooltip-format": "{format_source} {source_desc} // {source_volume}%",
     "scroll-step": 5
 },
@@ -268,8 +268,8 @@
     "format": "{}",
     "rotate": 0,
     "exec": "echo ; echo  logout",
-    "on-click": "/home/kyokino/.config/hyprdots/scripts/logoutlaunch.sh 2",
-    "on-click-right": "/home/kyokino/.config/hyprdots/scripts/logoutlaunch.sh 1",
+    "on-click": "/home/Nicola/.config/hyprdots/scripts/logoutlaunch.sh 2",
+    "on-click-right": "/home/Nicola/.config/hyprdots/scripts/logoutlaunch.sh 1",
     "interval" : 86400, // once every day
     "tooltip": true
 },
