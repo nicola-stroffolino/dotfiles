@@ -99,6 +99,7 @@ tooltip {
     transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
+/* All the little icons */
 #custom-weather,
 #custom-weather.severe,
 #custom-weather.sunnyDay,
@@ -148,7 +149,6 @@ tooltip {
     margin: 6px 0px 6px 0px;
     padding-left: 4px;
     padding-right: 4px;
-    
 }
 
 #custom-weather {
