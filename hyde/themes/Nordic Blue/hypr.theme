@@ -29,7 +29,9 @@ group {
 
 decoration {
     rounding = 7
-    drop_shadow = false
+    shadow {
+        enabled = false
+    }
 
     blur {
         enabled = yes
