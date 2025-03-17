@@ -14,7 +14,6 @@ configuration {
 
 @theme "~/.config/rofi/theme.rasi"
 
-
 // Main //
 window {
     height:                      12em;
@@ -59,7 +58,7 @@ listview {
     fixed-height:                true;
     fixed-columns:               true;
     cursor:                      "default";
-    background-color:            @main-bg;
+    background-color:            transparent;
     text-color:                  @main-fg;
 }
 

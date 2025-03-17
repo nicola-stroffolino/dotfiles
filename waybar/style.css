@@ -7,15 +7,20 @@
     min-height: 10px;
 }
 
-@import "theme.css";
+/* @import "theme.css"; */
+@import "/home/Nicola/.cache/wal/colors-waybar.css";
 
 window#waybar {
-    background: @bar-bg;
+    background: @background
+}
+
+tooltip * {
+    background-color: transparent;
 }
 
 tooltip {
-    background: @main-bg;
-    color: @main-fg;
+    background: @background; /* @main-bg */
+    color: @foreground; /* @main-fg */
     border-radius: 7px;
     border-width: 0px;
 }
@@ -31,13 +36,13 @@ tooltip {
     padding-left: 2px;
     padding-right: 2px;
     margin-right: 0px;
-    color: @main-fg;
+    color: @foreground;
     animation: ws_normal 20s ease-in-out 1;
 }
 
 #workspaces button.active {
-    background: @wb-act-bg;
-    color: @wb-act-fg;
+    background: @color1;
+    color: @background;
     margin-left: 2px;
     padding-left: 11px;
     padding-right: 11px;
@@ -47,8 +52,8 @@ tooltip {
 }
 
 #workspaces button:hover {
-    background: @wb-hvr-bg;
-    color: @wb-hvr-fg;
+    background: @color11;
+    color: @background;
     animation: ws_hover 20s ease-in-out 1;
     transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
@@ -81,7 +86,7 @@ tooltip {
 
 #taskbar button:hover {
     background: @wb-hvr-bg;
-    color: @wb-hvr-color;
+    color: @color0;
     animation: tb_hover 20s ease-in-out 1;
     transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
@@ -127,8 +132,8 @@ tooltip {
 #custom-sr_end,
 #custom-rl_end,
 #custom-rr_end {
-    color: @main-fg;
-    background: @main-bg;
+    color: @foreground;
+    background: @background;
     opacity: 1;
     margin: 3px 0px 3px 0px;
     padding-left: 4px;
