@@ -11,7 +11,7 @@
 @import "/home/Nicola/.cache/wal/colors-waybar.css";
 
 window#waybar {
-    background: @background
+    background-color: @background;
 }
 
 tooltip * {

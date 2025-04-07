@@ -4,7 +4,8 @@ configuration {
     show-icons:                  false;
 }
 
-@theme "~/.config/rofi/theme.rasi"
+//@theme "~/.config/rofi/theme.rasi"//
+@import "~/.cache/wal/colors-rofi-dark"
 
 
 // Main //
@@ -17,8 +18,7 @@ window {
     cursor:                      "default";
     spacing:                     0em;
     padding:                     0em;
-    border-color:                @main-br;
-    background-color:            @main-bg;
+    background-color:            @normal-background;
 }
 mainbox {
     enabled:                     true;
@@ -42,7 +42,7 @@ wallframe {
     spacing:                     0em;
     padding:                     0em;
     expand:                      false;
-    background-color:            @main-bg;
+    background-color:            @normal-background;
     background-image:            url("~/.cache/hyde/wall.quad", width);
 }
 
@@ -52,13 +52,13 @@ inputbar {
     enabled:                     true;
     padding:                     0em;
     children:                    [ "entry" ];
-    background-color:            @main-bg;
+    background-color:            @normal-background;
     expand:                      true;
 }
 entry {
     enabled:                     true;
     padding:                     1.8em;
-    text-color:                  @main-fg;
+    text-color:                  @normal-foreground;
     background-color:            transparent;
 }
 
@@ -82,7 +82,7 @@ listview {
     expand:                      false;
     cursor:                      "default";
     background-color:            transparent;
-    text-color:                  @main-fg;
+    text-color:                  @normal-foreground;
 }
 dummy {
     spacing:                     0em;
@@ -97,11 +97,11 @@ element {
     padding:                     0.5em;
     cursor:                      pointer;
     background-color:            transparent;
-    text-color:                  @main-fg;
+    text-color:                  @normal-foreground;
 }
 element selected.normal {
-    background-color:            @select-bg;
-    text-color:                  @select-fg;
+    background-color:            @selected-normal-background;
+    text-color:                  @normal-background;
 }
 element-text {
     vertical-align:              0.0;

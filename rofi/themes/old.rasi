@@ -1,24 +1,18 @@
-// Config //
-configuration {
-    modi:                        "drun,filebrowser,window,run";
-    show-icons:                  true;
-    display-drun:                " ";
-    display-run:                 " ";
-    display-filebrowser:         " ";
-    display-window:              " ";
-    drun-display-format:         "{name}";
-    window-format:               "{w}{t}";
-    font:                        "JetBrainsMono Nerd Font 10";
-    icon-theme:                  "Tela-circle-dracula";
+* {
+    main-bg:            #11111be6;
+    main-fg:            #cdd6f4ff;
+    main-br:            #cba6f7ff;
+    main-ex:            #f5e0dcff;
+    select-bg:          #b4befeff;
+    select-fg:          #11111bff;
+    separatorcolor:     transparent;
+    border-color:       transparent;
 }
-
-@theme "~/.config/rofi/theme.rasi"
-
 
 // Main //
 window {
-    height:                      30em;
-    width:                       37em;
+    height:                      12em;
+    width:                       38em;
     transparency:                "real";
     fullscreen:                  false;
     enabled:                     true;
@@ -31,61 +25,79 @@ window {
 mainbox {
     enabled:                     true;
     spacing:                     0em;
-    orientation:                 horizontal;
-    children:                    [ "listmode" , "inputbar" ];
+    padding:                     0em;
+    orientation:                 vertical;
+    children:                    [ "listbox" , "inputmode" ];
     background-color:            transparent;
-    background-image:            url("~/.cache/hyde/wall.thmb", height);
 }
 
 
 // Lists //
-listmode {
-    enabled:                     true;
-    children:                    [ "listbox" , "mode-switcher" ];
-    background-color:            transparent;
-    background-image:            url("~/.cache/hyde/wall.blur", height);
-}
 listbox {
+    padding:                     0em;
     spacing:                     0em;
-    padding:                     1em;
-    children:                    [ "dummy" , "listview" , "dummy" ];
+    orientation:                 horizontal;
+    children:                    [ "listview" ];
     background-color:            transparent;
+    background-image:            url("~/.cache/hyde/wall.blur", width);
 }
 listview {
-    enabled:                     true;
-    spacing:                     0em;
     padding:                     0.5em;
-    columns:                     1;
-    lines:                       6;
+    spacing:                     0.2em;
+    enabled:                     true;
+    columns:                     5;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
-    layout:                      vertical;
     reverse:                     false;
-    expand:                      false;
     fixed-height:                true;
     fixed-columns:               true;
     cursor:                      "default";
-    background-color:            @main-bg;
-    text-color:                  @main-fg;
-    border-radius:               1em;
-}
-dummy {
     background-color:            transparent;
+    text-color:                  @main-fg;
+}
+
+
+// Inputs //
+inputmode {
+    padding:                     0em;
+    spacing:                     0em;
+    orientation:                 horizontal;
+    children:                    [ "inputbar" , "mode-switcher" ];
+    background-color:            transparent;
+}
+inputbar {
+    enabled:                     true;
+    width:                       24em;
+    padding:                     0em;
+    spacing:                     0em;
+    padding:                     1.5em 1em 1.5em 2.5em;
+    children:                    [ "entry" ];
+    background-color:            transparent;
+}
+entry {
+    vertical-align:              0.5;
+    border-radius:               3em;
+    enabled:                     true;
+    spacing:                     0em;
+    padding:                     1em;
+    text-color:                  @main-fg;
+    background-color:            @main-bg;
 }
 
 
 // Modes //
-mode-switcher{
+mode-switcher {
+    width:                       13em;
     orientation:                 horizontal;
     enabled:                     true;
+    padding:                     1.5em 2.5em 1.5em 0em;
     spacing:                     1em;
-    padding:                     0em 9.5em 2em 2em;
     background-color:            transparent;
 }
 button {
-    padding:                     1em;
     cursor:                      pointer;
+    padding:                     0em;
     border-radius:               3em;
     background-color:            @main-bg;
     text-color:                  @main-fg;
@@ -96,23 +108,12 @@ button selected {
 }
 
 
-// Inputs //
-inputbar {
-    enabled:                     true;
-    width:                       10em;
-    children:                    [ "entry" ];
-    background-color:            transparent;
-}
-entry {
-    enabled:                     false;
-}
-
-
 // Elements //
 element {
+    orientation:                 vertical;
     enabled:                     true;
-    spacing:                     1em;
-    padding:                     0.3em;
+    spacing:                     0.2em;
+    padding:                     0.5em;
     cursor:                      pointer;
     background-color:            transparent;
     text-color:                  @main-fg;
@@ -122,14 +123,14 @@ element selected.normal {
     text-color:                  @select-fg;
 }
 element-icon {
-    size:                        3em;
+    size:                        2.5em;
     cursor:                      inherit;
     background-color:            transparent;
     text-color:                  inherit;
 }
 element-text {
     vertical-align:              0.5;
-    horizontal-align:            0.0;
+    horizontal-align:            0.5;
     cursor:                      inherit;
     background-color:            transparent;
     text-color:                  inherit;
@@ -149,3 +150,4 @@ textbox {
     vertical-align:              0.5;
     horizontal-align:            0.5;
 }
+

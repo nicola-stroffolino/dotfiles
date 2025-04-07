@@ -5,7 +5,7 @@
 
 scrDir="$(dirname "$(realpath "$0")")"
 source "${scrDir}/globalcontrol.sh"
-roconf="${confDir}/rofi/styles/style_7.rasi" # Changed by rofiselect.h
+roconf="${confDir}/rofi/config.rasi" # Changed by rofiselect.h
 
 [[ "${rofiScale}" =~ ^[0-9]+$ ]] || rofiScale=10
 
@@ -40,6 +40,6 @@ i_override="configuration {icon-theme: \"${i_override}\";}"
 
 
 #// launch rofi
-
-rofi -show "${r_mode}" -theme-str "${r_scale}" -theme-str "${r_override}" -theme-str "${i_override}" -config "${roconf}"
+#// -theme-str "${r_scale}" -theme-str "${r_override}" -theme-str "${i_override}"
+rofi -show "${r_mode}" -config "${roconf}" -theme "${confDir}/rofi/themes/spotlight-dark.rasi"
 
