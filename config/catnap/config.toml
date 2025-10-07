@@ -10,12 +10,13 @@
 [stats]
 username  = {icon = " ", name = "nme", color = "(RD)"}
 hostname  = {icon = " ", name = "hst", color = "(RD)"}
-uptime    = {icon = " ", name = "upt", color = "(BE)"}
+uptime    = {icon = " ", name = "upt", color = "(RD)"}
 distro    = {icon = " ", name = "dst", color = "(BE)"}
-kernel    = {icon = " ", name = "ker", color = "(MA)"}
+kernel    = {icon = " ", name = "ker", color = "(BE)"}
+packages  = {icon = " ", name = "pkg", color = "(BE)"}
 desktop   = {icon = " ", name = "twm", color = "(MA)"}
-terminal  = {icon = " ", name = "trm", color = "(CN)"}
-shell     = {icon = " ", name = "shl", color = "(CN)"}
+terminal  = {icon = " ", name = "trm", color = "(MA)"}
+shell     = {icon = " ", name = "shl", color = "(MA)"}
 # cpu       = {icon = " ", name = "cpu", color = "(RD)"}
 # disk      = {icon = " ", name = "disk", color = "(GN)"}
 # memory    = {icon = " ", name = "memory", color = "(YW)"}
