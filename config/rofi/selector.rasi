@@ -1,75 +1,105 @@
-*{
-    background: transparent;
-    background-alt: transparent;
-    background-color: transparent;
-    foreground: transparent;
-    urgent:     transparent;
-    text-color: transparent;
-}
+@import "~/.cache/wal/colors-rofi-dark"
 
-configuration{
-    font: "Noto Sans 20";
+configuration {
+    font: "JetBrainsMono 14";
     show-icons: true;
     location: 5;
     sidebar-mode: false;
     prompt: "search: ";
     alternate-row-color: false;
-    // background-color: rgba(221, 121, 152, 0.5);
-    fixed-height: false;
-    // alternate:false;
 }
 
+window {
+    width: 100%;
 
-listview{
-    spacing: 0px;
-    scrollbar: true;
-    overflow:true;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    spacing: 0;
+}
+
+mainbox {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    spacing: 0;
+}
+
+inputbar {
+    padding: 11px 11px 0px;
+    border: 0;
+    margin: 0;
+    spacing: 11px;
+}
+
+prompt, entry, num-rows, num-filtered-rows, textbox-num-sep, textbox-prompt-colon {
+    vertical-align: 0.5;
+
+    padding: 0;
+    border: 0;
+    margin: 0 0 11px 0;
+    spacing: 0;
+}
+
+prompt {
+    
+}
+
+textbox-prompt-colon {
+    str: "";
+    font: "JetBrainsMono 20";
+
+}
+
+entry {
+
+}
+
+case-indicator {
+    enabled: false;
+}
+
+listview {
+    horizontal-align: 0.5;
     layout: horizontal;
     
-    background-color: transparent;
+    padding: 0 11px 11px 10px;
+    border: 0;
+    margin: 0;
+    spacing: 11px;
+}
+
+element {
+    width: 260px;
+
+    orientation: vertical;
+    horizontal-align: 0.5;
+    height: 0px;
+
+    padding: 0;
+    border: 0;
+    margin: 0;
+    spacing: 0;
 }
 
 element-icon {
-    vertical-align: 0.0;
-    size:300px;
-    
-    padding: 0px 0px;
-    margin: 0px;
-    spacing:0px 0px;
-    // background-color: rgba(221, 121, 152, 0.5);
+    size: 37%;
+
+    padding: 0;
+    border: 0;
+    margin: 0;
+    spacing: 0;
 }
 
-
-element-text{
+element-text {
     horizontal-align: 0.5;
     vertical-align: 0.5;
-    // border-radius: 4px;
-    
-}
-element.alternate.normal{
-    background-color: transparent;
+
+    padding: 5px;
+    border: 0;
+    margin: 0;
+    spacing: 0;
+
+    text-color: @foreground;
 }
 
-element{
-    orientation: vertical;
-    height: 0px;
-    padding: 0px;
-    margin: 0px;
-    spacing:0px;
-    overflow: true;
-}
-
-element-text selected {
-    enabled:false;
-    
-    background-color: rgba(255, 255, 255, 0.8);
-    text-color: rgba(241, 90, 144, 0.8);
-}
-
-window{
-    width: 100%;
-
-    background-color: rgba(241, 90, 144, 0.5);
-    
-    border: 0px;
-}
